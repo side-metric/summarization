@@ -37,7 +37,8 @@ In our case, the anchor is the code to document, with a suitable summary represe
 
 
 * ##### Statistical Analysis
-    The scripts needed to conduct the analysis are available <a href='https://github.com/antonio-mastropaolo/code-summarization-metric/tree/main/Analysis'>here</a> 
+    - The R script needed to conduct the analysis is available <a href='https://github.com/side-metric/summarization/blob/main/Analysis/Analysis-SIDE.r'>here</a>
+    - We also provide a Jupyter Notebook implementation of the R script which is available <a href='https://github.com/side-metric/summarization/blob/main/Analysis/Analysis-SIDE.ipynb'>here</a>  
 
 
 * ##### How to use SIDE
