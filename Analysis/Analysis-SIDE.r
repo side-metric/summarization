@@ -1,4 +1,4 @@
-setwd("summarization-metric")
+setwd("/Users/mdipenta/summarization-metric")
 t<-read.csv("human-annotated-dataset-with-metrics.csv")
 
 summary(t)
@@ -109,6 +109,9 @@ p <- pnorm(abs(coeffs[, "t value"]), lower.tail = FALSE) * 2
 OR<-exp(coeffs[,"Value"])
 tab<-cbind(OR=OR,coeffs, "p value" = round(p,3))
 rows=length(reducedMetrics)
+pvalues<-tab[1:rows,5]
+adjp=p.adjust(pvalues,method="BH")
+tab[1:rows,5]=adjp
 xtable(tab[1:rows,],digits=4)
 
 depM="Content Adequacy"
@@ -129,6 +132,9 @@ p <- pnorm(abs(coeffs[, "t value"]), lower.tail = FALSE) * 2
 OR<-exp(coeffs[,"Value"])
 tab<-cbind(OR=OR,coeffs, "p value" = round(p,3))
 rows=length(reducedMetrics)
+pvalues<-tab[1:rows,5]
+adjp=p.adjust(pvalues,method="BH")
+tab[1:rows,5]=adjp
 xtable(tab[1:rows,],digits=4)
 
 depM="Conciseness"
@@ -147,6 +153,9 @@ p <- pnorm(abs(coeffs[, "t value"]), lower.tail = FALSE) * 2
 OR<-exp(coeffs[,"Value"])
 tab<-cbind(OR=OR,coeffs, "p value" = round(p,3))
 rows=length(reducedMetrics)
+pvalues<-tab[1:rows,5]
+adjp=p.adjust(pvalues,method="BH")
+tab[1:rows,5]=adjp
 xtable(tab[1:rows,],digits=4)
 
 depM="Fluency"
@@ -165,6 +174,9 @@ p <- pnorm(abs(coeffs[, "t value"]), lower.tail = FALSE) * 2
 OR<-exp(coeffs[,"Value"])
 tab<-cbind(OR=OR,coeffs, "p value" = round(p,3))
 rows=length(reducedMetrics)
+pvalues<-tab[1:rows,5]
+adjp=p.adjust(pvalues,method="BH")
+tab[1:rows,5]=adjp
 xtable(tab[1:rows,],digits=4)
 
 attach(tsum,warn.conflicts=FALSE)
@@ -188,6 +200,9 @@ p <- pnorm(abs(coeffs[, "t value"]), lower.tail = FALSE) * 2
 OR<-exp(coeffs[,"Value"])
 tab<-cbind(OR=OR,coeffs, "p value" = round(p,3))
 rows=length(reducedMetrics)
+pvalues<-tab[1:rows,5]
+adjp=p.adjust(pvalues,method="BH")
+tab[1:rows,5]=adjp
 xtable(tab[1:rows,],digits=4)
 
 attach(tsum,warn.conflicts=FALSE)
