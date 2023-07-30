@@ -1,4 +1,4 @@
-setwd("/Users/mdipenta/summarization-metric")
+setwd("/Users/anon/summarization-metric")
 t<-read.csv("human-annotated-dataset-with-metrics.csv")
 
 summary(t)
